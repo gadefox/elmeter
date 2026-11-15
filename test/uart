@@ -1,0 +1,6 @@
+#!/bin/rc
+
+stty -F /dev/ttyUSB0 115200 raw -echo
+echo "INIT $(date -u '+%F %T')" > /dev/ttyUSB0
+echo "GETTIME" > /dev/ttyUSB0
+cat /dev/ttyUSB0

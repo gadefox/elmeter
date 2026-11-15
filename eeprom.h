@@ -1,0 +1,21 @@
+#ifndef EEPROM_H
+#define EEPROM_H
+
+#include <stdbool.h>
+#include <stdint.h>
+
+//------------------------------------------------------------------------------
+
+// Chip configuration (see datasheet):
+#define EEPROM_I2C_ADDR     0x50 // 0x50 | A2 A1 A0
+#define EEPROM_ADDR_BYTES   2
+#define EEPROM_PAGE_SIZE    32
+#define EEPROM_SIZE         4096UL
+
+//------------------------------------------------------------------------------
+
+bool eeprom_init(void);
+bool eeprom_read(uint16_t addr, uint8_t *data, uint16_t length);
+bool eeprom_write(uint16_t addr, const uint8_t *data, uint16_t length);
+
+#endif // EEPROM_H
