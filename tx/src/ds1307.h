@@ -6,7 +6,7 @@
 
 //------------------------------------------------------------------------------
 
-#define DS1307_RAM_SIZE  56 // user RAM, registers 0x08..0x3F
+#define DS1307_RAM_SIZE  56     // user RAM, registers 0x08..0x3F
 
 typedef struct {
   uint8_t  sec;    // 0..59
@@ -27,8 +27,8 @@ bool ds1307_init(void);
 // e.g. after battery loss. ds1307_set_time() starts the oscillator.
 bool ds1307_is_running(void);
 
-bool ds1307_set_time(const ds1307_time_t *t);
-bool ds1307_get_time(ds1307_time_t *t);
+bool ds1307_set_time(const ds1307_time_t *tm);
+bool ds1307_get_time(ds1307_time_t *tm);
 
 // Battery-backed user RAM (56 bytes), offset 0..55.
 bool ds1307_ram_write(uint8_t offset, const uint8_t *data, uint8_t length);

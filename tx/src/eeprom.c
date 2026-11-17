@@ -4,6 +4,10 @@
 
 //------------------------------------------------------------------------------
 
+// Chip configuration (see datasheet):
+#define EEPROM_I2C_ADDR    0x50 // 0x50 | A2 A1 A0
+#define EEPROM_ADDR_BYTES  2
+
 // Internal write cycle is max 5 ms (typ.), poll for ACK up to 10 ms.
 #define EEPROM_POLL_STEP_US  100
 #define EEPROM_POLL_COUNT    100

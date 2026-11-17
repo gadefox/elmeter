@@ -7,10 +7,9 @@
 //------------------------------------------------------------------------------
 
 // Chip configuration (see datasheet):
-#define EEPROM_I2C_ADDR     0x50 // 0x50 | A2 A1 A0
-#define EEPROM_ADDR_BYTES   2
-#define EEPROM_PAGE_SIZE    32
-#define EEPROM_SIZE         4096UL
+#define EEPROM_SIZE       4096
+#define EEPROM_PAGE_SIZE  32
+#define EEPROM_PAGE_MAX   (EEPROM_SIZE / EEPROM_PAGE_SIZE)
 
 //------------------------------------------------------------------------------
 

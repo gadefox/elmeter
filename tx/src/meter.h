@@ -7,14 +7,6 @@
 
 //------------------------------------------------------------------------------
 
-// 1 pulse = 1 Wh, window = 5 min. Window number ("bucket") counts windows
-// since T0, T0 is stored in the DS1307 RAM and is aligned to METER_WINDOW_SEC.
-#define METER_WINDOW_SEC     300u    // 5 minutes
-#define METER_PAGE_WINDOWS   18u     // 18 x 12 bit = 27 B in one 32 B EEPROM page
-#define METER_PAGES          128u    // 4 KiB / 32 B
-#define METER_COUNT_MAX      0xFFEu
-#define METER_COUNT_UNKNOWN  0xFFFu
-
 typedef enum {
   METER_NO_TIME,   // T0 / clock invalid, waiting for meter_set_time()
   METER_RUNNING

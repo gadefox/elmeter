@@ -70,7 +70,7 @@ void uart_put_u32(uint32_t val) {
     uart_putc(buf[--n]);
 }
 
-void uart_put_dec99(uint8_t val) {
+void uart_put_dec(uint8_t val) {
   uart_putc('0' + val / 10);
   uart_putc('0' + val % 10);
 }

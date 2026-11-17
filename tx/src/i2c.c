@@ -23,7 +23,6 @@ static bool twi_wait(void) {
     if (--n == 0)
       return false;
   }
-
   return true;
 }
 

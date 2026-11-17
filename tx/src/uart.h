@@ -15,6 +15,6 @@ bool uart_getc(uint8_t *c);
 void uart_putc(char c);
 void uart_puts_pgm(const char *s);  // string in flash: uart_puts_P(PSTR("..."))
 void uart_put_u32(uint32_t val);    // decimal
-void uart_put_dec99(uint8_t val);   // 2 digits, zero padded
+void uart_put_dec(uint8_t val);   // 2 digits, zero padded
 
 #endif // UART_H
